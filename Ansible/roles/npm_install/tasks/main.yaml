@@ -1,0 +1,12 @@
+# Install Npm
+- name: Install nodejs
+  ansible.builtin.apt:
+    name: "nodejs"
+    state: present
+  become: yes
+
+- name: Install npm
+  ansible.builtin.apt:
+    name: "npm"
+    state: present
+  become: yes

@@ -1,0 +1,12 @@
+---
+- hosts: slaves
+  roles:
+    - apt18_link
+    - pip_install
+    - pip_link
+    - npm_install
+    - npm_link
+    - docker_install
+    - docker_link
+
+

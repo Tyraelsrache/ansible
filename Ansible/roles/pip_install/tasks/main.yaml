@@ -1,0 +1,5 @@
+# install python3 and pip
+- name: Install pip
+  ansible.builtin.apt:
+    name: "python3-pip"
+    state: present

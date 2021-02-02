@@ -1,0 +1,17 @@
+# install docker
+- name: Install docker.io
+  ansible.builtin.apt:
+    name: "docker.io"
+    state: present
+  become: yes
+
+- name: Adding user {{ USER }} to docker group  
+  user:
+    name: "{{ USER }}"
+    groups: "docker"
+    append: "yes"
+  become: yes
+
+- name: Reboot server in order for changes to take place
+  shell: "sleep 1 && reboot"
+  async: 1
